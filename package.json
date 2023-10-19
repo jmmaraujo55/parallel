@@ -1,6 +1,6 @@
 {
   "name": "@joaoaraujodev/parallel",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "array-based parallel execution",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
