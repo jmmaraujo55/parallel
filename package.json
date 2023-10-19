@@ -1,0 +1,38 @@
+{
+  "name": "@joaoaraujodev/parallel",
+  "version": "0.0.0",
+  "description": "array-based parallel execution",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json --forceExit --passWithNoTests",
+    "build": "rimraf dist && NODE_ENV=production tsc",
+    "build:dev": "rimraf dist && tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint",
+    "prepare": "npm run build",
+    "postversion": "git push --all && git push --tags"
+  },
+  "author": "Joao Araujo <admin@joaoaraujo.dev>",
+  "keywords": [
+    "sdk"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.4.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.0.4"
+  }
+}
