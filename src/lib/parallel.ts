@@ -5,6 +5,7 @@ interface IOptions {
   uniqueKeyPath?: string;
   filterDuplicates?: boolean;
   interval?: number;
+  force?: boolean;
 }
 
 function validateArguments(array, options, callback) {
@@ -25,9 +26,10 @@ function validateArguments(array, options, callback) {
 
 function validateOptions(options, array: any[]) {
   if (options.parallelExecutions && options.parallelExecutions > 1000) {
-    throw new Error(
-      "Error trying to execute parallel: The maximum value for parallel runs is 1000.",
-    );
+    if (!options.force)
+      throw new Error(
+        "Error trying to execute parallel: The maximum value for parallel runs is 1000. If you want to force it, set the force option to true.",
+      );
   }
 
   if (
