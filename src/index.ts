@@ -1,1 +1,1 @@
-export { default as default } from "./lib/parallel";
+export { default as parallel } from "./lib/parallel";
