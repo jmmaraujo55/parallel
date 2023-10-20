@@ -1,1 +1,3 @@
-export { default as parallel } from "./lib/parallel";
+import parallel from "./lib/parallel";
+
+export default parallel;
